@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+ "browser_action": {
+    "default_icon": "icon.png"
+   
+  },
+  "name": "Meaning OnSelect",
+  "version": "1.0.1",
+  "description": "double tap on any word to find the meaning/significance of the word",
+ "background": {
+    "scripts": ["jquery-3.1.1.min.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+  	   "js": ["jquery-3.1.1.min.js","content.js"],
+    "css": ["style.css"],
+ 
+    "matches": ["http://*/*","https://*/*"]
+  }],
+   "web_accessible_resources": ["loading.gif"],
+    "permissions": [
+          "storage"
+        ]
+ 
+}
